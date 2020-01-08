@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Android_Speech</string>
+    <string name="tts" translatable="false">Text a voz</string>
+    <string name="text_insert" translatable="false">Escribe el texto a leer</string>
+    <string name="text_pitch" translatable="false">Tono</string>
+    <string name="text_speed" translatable="false">Velocidad</string>
+    <string name="action_settings">Menu</string>
+</resources>

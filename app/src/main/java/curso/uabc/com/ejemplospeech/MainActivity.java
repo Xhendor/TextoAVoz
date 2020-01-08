@@ -1,6 +1,5 @@
 package curso.uabc.com.ejemplospeech;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -125,7 +124,12 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private void speech() {
         engine.setPitch((float) pitch);
         engine.setSpeechRate((float) speed);
-        //engine.speak(editText.getText().toString(), TextToSpeech.QUEUE_FLUSH, null, null);
-        engine.speak(editText.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            engine.speak(editText.getText().toString(),TextToSpeech.QUEUE_FLUSH,null,null);
+        } else {
+            engine.speak(editText.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+        }
+
+
     }
 }
